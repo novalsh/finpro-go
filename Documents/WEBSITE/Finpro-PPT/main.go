@@ -1,18 +1,18 @@
-package finproppt
+package main
 
 import (
 	"net/http"
 
-	"github.com/novalsh/go-finpro/controller/accountscontroller"
+	"github.com/novalsh/finpro-go/controller/accountscontroller"
 )
 
 func main() {
 	http.HandleFunc("/", accountscontroller.Index)
-	http.HandleFunc("/buku", accountscontroller.Index)
-	http.HandleFunc("/buku/index", accountscontroller.Index)
-	http.HandleFunc("/buku/add", accountscontroller.Add)
-	http.HandleFunc("/buku/edit", accountscontroller.Edit)
-	http.HandleFunc("/buku/delete", accountscontroller.Delete)
+	http.HandleFunc("/accounts", accountscontroller.Index)
+	http.HandleFunc("/accounts/index", accountscontroller.Index)
+	http.HandleFunc("/accounts/add", accountscontroller.Add)
+	http.HandleFunc("/accounts/edit", accountscontroller.Edit)
+	http.HandleFunc("/accounts/delete", accountscontroller.Delete)
 
-	http.ListenAndServe(":9000", nil)
+	http.ListenAndServe(":3000", nil)
 }
