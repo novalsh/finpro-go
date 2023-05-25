@@ -2,8 +2,6 @@ package main
 
 import (
 	"net/http"
-
-	"github.com/novalsh/go-finpro/controller/accounts/AccountsController"
 )
 
 func main() {
